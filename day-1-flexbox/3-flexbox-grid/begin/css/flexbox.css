@@ -32,12 +32,64 @@ div img {
 
 /* grid system -- mobile first! */
 
+.row {
+	display: flex;
+	flex-flow: row wrap;
+}
+[class*="col"] {
+	margin: 0 2% 2% 2%;
+	padding: 0 1%;
+}
+.col1to2 {
+	background-color: #ffc;
+}
+.col2 {
+	background-color: #fcf;
+}
+.col3to2 {
+	background-color: #cff;
+}
+.col4 {
+	background-color: #ccf;
+}
+.col5 {
+	background-color: #ffc;
+}
+.col6 {
+	background-color: #fcf;
+}
 
 /* Mobile Landscape Screen Sizes */
-@media only screen and (min-width: 480px)  {
-
+@media only screen and (min-width: 480px) {
+	.col1to2, .col3to2, .col5 {
+		flex: 0 0 44%;
+	}
+	.col2, .col4, .col6 {
+		flex: 0 0 92%;
+	}
+	.order {
+		order: 1;
+	}
 }
 /* Desktop screen Sizes */
 @media only screen and (min-width: 768px) {
-
+	.col1to2, .col5 {
+		flex: 0 0 20%;
+	}
+	.col2, .col6 {
+		flex: 0 0 44%;
+	}
+	.col3to2 {
+		flex: 0 0 68%;
+	}
+	.col4 {
+		flex: 0 0 92%;
+	}
+	.reverse {
+		flex-direction: row-reverse;
+		margin: 0 4% 0 -4%;
+	}
+	.order {
+		order: 0;
+	}
 }

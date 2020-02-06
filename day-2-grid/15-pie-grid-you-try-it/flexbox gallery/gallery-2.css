@@ -15,21 +15,20 @@ ul {
 	list-style-type: none;
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: flex-start;
 }
 li {
 	flex: 0 0 100%;
 }
-img {
-	width: 100%;
+img { 
+  width: 100%; 
 }
-@media (min-width: 550px) {
+@media (min-width: 605px) {
 	li {
 		flex: 0 0 50%;
 	}
 }
-@media (min-width: 850px) { 
+@media (min-width: 910px) { 
 	li {
-		flex: 0 0 25%;
+		flex: 0 0 33%;
 	}
 }

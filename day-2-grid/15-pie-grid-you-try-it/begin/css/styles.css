@@ -17,7 +17,10 @@ h1,h2,h3,h4,h5,h6 {
   color: #C80060;
 }
 .wrapper {
-	margin: 0 auto;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
 }
 article img {
   border-radius: 10px;
@@ -87,7 +90,7 @@ div.row {
 [class*='sidebar'] img {
   border-radius: 0px 0px 10px 10px;
   width: 100%;
-  max-width: 250px;
+  max-width: 500px;
   display: block; /* without this, there is a gap between the image and border -- space for descenders in text, for inline elements */
 } 
 .sidebar-secondary {
@@ -127,37 +130,43 @@ footer a {
   text-decoration: none;
 }
 /* grid system */
-.row {
+/*.row- {
   display: flex;
   flex-flow: row wrap;
   flex: 0 1 auto;
 }
+*/
+
 [class*="col-"] {
-  flex: 0 0 92%;
   margin: 0 4%;
 }
 .full-width {
-  flex: 0 0 100%;
   margin: 0;
 }
 [class*="sidebar"] {
-  flex: 0 0 100%;
   margin-bottom: 2em;
   margin-right: 1em;
 }
 .row.col-1-4 {
   margin-top: 3em;
 }
-/* global alignment options */
+/*
+ global alignment options
 .reverse {
   flex-direction: row-reverse;
 }
+*/
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 550px) { 
   .wrapper {
       width: 97%;
       max-width: 767px;
+  }
+  .grid {
+    display: grid;
+    grid-gap: 5%;
+    grid-template-columns: 55% 50%;
   }
 div.row {
   padding: 0 2em;
@@ -177,16 +186,6 @@ div.row {
     margin-left: 4%;
     margin-right: 0%;
   }
-  .col-1-2,
-  .col-2,
-  [class*="sidebar"] {
-    flex: 0 0 44%; 
-  }
-  .col-1-4,
-  .col-3,
-  .col-4 {
-    flex: 0 0 92%;
-  }
   .reverse [class*='col-'] {
     margin-left: 0%;
     margin-right: 4%;
@@ -198,6 +197,11 @@ div.row {
       width: 97%;
       max-width: 1200px;
       float: none;
+  }
+  .grid {
+    display: grid;
+    grid-gap: 5%;
+    grid-template-columns: 60% 30%;
   }
   h2 {
     font-size: 3em;
@@ -220,33 +224,9 @@ div.row {
   nav a {
       padding: 0em 1em;
   }
-  .col-1-2,
-  .col-1-4 {
-    flex: 0 0 20%;
+  footer {
+    margin-left: 5rem;
+    margin-right: 6rem;
   }
-  .col-2,
-  .col-2-4 {
-    flex: 0 0 44%;
-  }
-  .col-3 {
-    flex: 0 0 68%;
-  }
-  .col-4 {
-    flex: 0 0 92%;
-  }
-  [class*="sidebar"] {
-    flex: 0 0 100%;
-  }
-  .order-first {
-    order: 1;
-  } 
-  .order-second {
-    order: 2;
-  }
-  .order-third {
-    order: 3;
-  }
-  .order-fourth {
-    order: 4;
-  }
+
 }

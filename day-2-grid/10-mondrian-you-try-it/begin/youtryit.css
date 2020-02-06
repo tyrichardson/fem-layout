@@ -3,42 +3,69 @@
   width: 633px;
   height: 458px;
   background: url(mondrian2.png) no-repeat;
+  display: grid;
+  grid-gap: 8px;
+  grid-template-columns: 302px 88px 150px 70px ;
+  grid-template-rows: 70px 16px 56px 50px 82px 144px ;
+  background-color: black;
  
 }
 div {
 	border: 1px solid black;
 	background-color: white;
-	opacity: 0.5;
+	opacity: 0.7;
 }
 .a {
-
+  grid-column: 1/2 ;
+  grid-row: 1/6  ;
+  color: white;
+  background-color: red;
 }
 .b {
-
+  grid-column: 2/3 ;
+  grid-row: 1/3 ;
+  color: black;
+  background-color: yellow;
 }
 .c {
-
+  grid-column: 3/4 ;
+  grid-row: 1/4 ;
 }
 .d {
-
+  grid-column: 4/5 ;
+  grid-row: 1/2 ;
+  color: white;
+  background-color: red;
 }
 .e {
-
+  grid-column: 2/3;
+  grid-row: 3/6 ;
 }
 .f {
-
+  grid-column: 3/4;
+  grid-row: 4/5 ;
+  color: white;
+  background-color: blue;
 }
 .g {
-	
+  grid-column: 4/5 ;
+  grid-row: 2/5 ;
 }
 .h {
-	
+  grid-column: 1/2 ;
+  grid-row: 6/7 ;
 }
 .i {
-	
+  grid-column: 2/3 ;
+  grid-row: 6/7 ;
+  color: white;
+  background-color: blue;
 }
 .j {
-	
+  grid-column: 3/5 ;
+  grid-row: 5/7 ;
+  color: black;
+  background-color: yellow;
 }
 
 

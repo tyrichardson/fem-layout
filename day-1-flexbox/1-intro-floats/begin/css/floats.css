@@ -24,20 +24,67 @@ a {
 	float: none;
 	background-color: #fff;
 }
-
 div img {
 	width: 100%;
 	max-width: 225px; 
 }
 
-/* grid system -- mobile first! */
+/* grid system */
 
+.row::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+[class*='cw'] {
+	width: 92%;
+	margin-left: 4%;
+	margin-right: 4%;
+	margin-bottom: 1rem;
+	min-height: 1px;
+}
+.cw1, .cw1-r3 {
+	background-color: #ffc;
+}
+.cw2 {
+	background-color: #fcf;
+}
+.cw3 {
+	background-color: #cff;
+}
+.cw4 {
+	background-color: #ccf;
+}
+
+/* media queries */
 
 /* Mobile Landscape Screen Sizes */
 @media only screen and (min-width: 480px)  {
-
+	[class*='cw'] {
+		margin-right: 0;
+		min-height: 1px;
+		float: left;
+	}
+	.cw1, .cw1-r3 {
+		width:44%;
+	}
+	.cw2, .cw3, .cw4 {
+		width: 92%;
+	}
 }
+
 /* Desktop screen Sizes */
 @media only screen and (min-width: 768px) {
-
+	.cw1, .cw1-r3 {
+		width: 20%;
+	}
+	.cw2 {
+		width: 44%;
+	}
+	.cw3 {
+		width: 68%;
+	}
+	.cw4 {
+		width: 92%;
+	}
 }
